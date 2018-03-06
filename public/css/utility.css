@@ -1,0 +1,27 @@
+/* Backgrounds */
+.bkg-transparent-black{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bkg-meta-display{
+ 
+    box-shadow: 3px 3px 8px #61157c;
+    padding:15px;
+}
+
+/* PADDING */
+.extra-padding-25{
+    padding:25px;
+}
+
+.extra-padding-50{
+    padding:50px;
+}
+
+/* HR STYLES */
+hr.purple { 
+    border: 0; 
+    height: 2px; 
+    background: #61157c; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), #61157c, rgba(0, 0, 0, 0.8)); }

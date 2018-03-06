@@ -1,95 +1,152 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.default')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<div class="row"> <!-- main row start -->
+    <div class="col-xs-12 col-sm-12 col-lg-9 mx-auto bkg-transparent-black extra-padding-25" id="mainPanel"> <!-- main col start -->
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+        <div class="text-center"> <!--center image-->
+            <img src="{{asset('img/depecheLogo.png')}}" class="img img-fluid" alt="depeche logo"/>
+        </div>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                    @if($guild->recruitment != 0)
+                    <div class="float-left bkg-meta-display">
+                            <p>We are recruiting.</p>
+                    </div>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+                    <div class="float-left">
+                            <p>We are not recruiting.</p>
+                    </div>
+                    @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                    <div class="float-right bkg-meta-display">
+                    <p>Total guild characters: {{$guild->members}}</p>
+                    </div>
             </div>
         </div>
-    </body>
-</html>
+
+        <hr class="purple"/>
+
+        <div class="row"> <!-- start of row progress -->
+
+         <div class="d-none d-sm-block col-sm-12 extra-padding-25"> <!-- visibility control -->
+            <h3 class="text-center">Mythic Progression</h3>
+            <br/>
+                <div class="row">
+                        @foreach($deadbosses as $killed)
+
+                        @switch($killed)
+                            
+                            @case(11992)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="garothi">
+                                    <h4>Mythic</h4>
+                                    <br/>
+                                    <h4>Garothi Worldbreaker</h4>
+                                </div>
+                            @break;
+                            
+                            @case(11993)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="felhounds">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Felhounds of Sargeras</h4>
+                                </div>
+                            @break;
+                            
+                            @case(11994)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="highcommand">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Antoran High Command</h4>
+                                </div>
+                            @break;
+                           
+                            @case(11995)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="portal">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Portal Keeper Hasabel</h4>
+                                </div>
+                            @break;
+                          
+                            @case(11996)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="eonar">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Defense of Eonar</h4>
+                                </div>
+                            @break;
+                            
+                            @case(11997)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="imonar">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Imonar the Soulhunter</h4>
+                                </div>
+                            @break;
+                            
+                            @case(11998)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="kingaroth">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Kin'Garoth</h4>
+                                </div>
+                            @break;
+                            
+                            @case(11999)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="varimathras">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Varimathras</h4>
+                                </div>
+                            @break;
+                          
+                            @case(12000)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="coven">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Coven of Shivarra</h4>
+                                </div>
+                            @break;
+                         
+                            @case(12001)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="aggramar">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Aggramar</h4>
+                                </div>
+                            @break;
+                            
+                            @case(12002)
+                                <div class="col-sm-4 col-lg-2 mx-auto text-center" id="argus">
+                                        <h4>Mythic</h4>
+                                        <br/>
+                                        <h4>Argus the Unmaker</h4>
+                                </div>
+                            @break;
+                        @endswitch
+                    @endforeach
+                </div>
+         </div><!-- end of visibility control -->
+            
+        </div> <!-- end of row progress-->
+
+        <div class="row"> <!-- about us -->
+            <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
+                <h3 class="text-center">About us</h3>
+                <br/>
+                {!!$guild->about!!}
+
+
+            </div>
+        </div> <!-- about us end-->
+
+
+    
+    </div> <!-- main col end -->
+</div> <!-- main row end -->
+
+@stop

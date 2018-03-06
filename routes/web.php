@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'BaseController@index',
+    'as' => 'index'
+]);
+
+Route::get('update-guild',[
+    'uses' => 'BaseController@updateGuild',
+    'as' => 'update-guild'
+]);
