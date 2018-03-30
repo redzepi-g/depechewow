@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Kanit|Righteous|Russo+One|Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Russo+One" rel="stylesheet"> 
     
     <!-- utility style -->
     <link rel="stylesheet" href="{{asset('css/utility.css')}}" />
@@ -20,25 +20,56 @@
   </head>
   <body>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-lg-9 mx-auto bkg-transparent-black">
-          <h1>test.</h1>
-        </div>
-      </div>
-    </div>
-  
-    <div class="container-fluid">
-      @yield('content')
-    </div>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-lg-9 mx-auto bkg-transparent-black extra-padding-25">
-          <h1>I am footer.</h1>
+
+
+      <div class="row"> <!-- main row start -->
+        <div class="col-xs-12 col-sm-12 col-lg-12 mx-auto extra-padding-50" id="headerPanel"> <!-- main col start -->
+          
+          <div class="row"> <!-- nav -->
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="nav-link">
+                  <a href="#">Home</a>
+                </div>
+                <div class="nav-link">
+                  <a href="#">Socials</a>
+                </div>
+                <div class="nav-link">
+                  <a href="#">Mithicc Raiders</a>
+                </div>
+                <div class="nav-link">
+                  <a href="#">Community Guidelines</a>
+                </div>
+            </div> 
+          </div><!-- end nav-->
+          <hr style="one"/>
+            <div class="text-center extra-padding-50"> <!--center image-->
+                <img src="{{asset('img/depecheLogo.png')}}" class="img img-fluid" alt="depeche logo"/>
+                <br/>
+                <p class="guild-font font-italic">&lt;Depeche&gt; has been founded on January 10th 2017</p>
+            </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 extra-padding-25">
+                <h3 class="text-center guild-font">&lt;Depeche&gt; EU - Stormscale</h3>
+            </div>
         </div>
-      </div>
+          
+        
+        </div> <!-- main col end -->
+    </div> <!-- main row end -->
+
+      @yield('content')
+
+      <div class="row"> <!-- footer row -->
+          <div class="col-xs-12 col-sm-12 col-lg-12 mx-auto extra-padding-25">
+            <h1>I am footer.</h1>
+          </div>
+        </div>
     </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

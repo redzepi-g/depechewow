@@ -1,84 +1,25 @@
 body{
+    font-family: 'Russo One', sans-serif;
+}
+#headerPanel{
     background:url('../img/bkg.jpg') center fixed no-repeat;
     -webkit-background-size:cover;
     -o-background-size:cover;
     -moz-background-size:cover;
     background-size:cover;
-    font-family: 'Russo One', sans-serif;
+    color:white;
 }
 
-#garothi{
-    padding:15px;
-    background:url('../img/antorus/garothi.jpg');
+#guildProgression{
+    background:url('../img/bkg.jpg') center fixed no-repeat;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -moz-background-size:cover;
     background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
+    color:white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-#felhounds{
-    padding:15px;
-    background:url('../img/antorus/felhounds.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#highcommand{
-    padding:15px;
-    background:url('../img/antorus/highcommand.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#portal{
-    padding:15px;
-    background:url('../img/antorus/portalkeeper.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#eonar{
-    padding:15px;
-    background:url('../img/antorus/eonar.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#imonar{
-    padding:15px;
-    background:url('../img/antorus/imonar.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#kingaroth{
-    padding:15px;
-    background:url('../img/antorus/kingaroth.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#varimathras{
-    padding:15px;
-    background:url('../img/antorus/varimathras.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#coven{
-    padding:15px;
-    background:url('../img/antorus/coven.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-
-#aggramar{
-    padding:15px;
-    background:url('../img/antorus/aggramar.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
-}
-#argus{
-    padding:15px;
-    background:url('../img/antorus/argus.jpg');
-    background-size:cover;
-    box-shadow: 3px 3px 8px #61157c;
+.carousel-item img{
+    box-shadow: 10px 10px 8px #888888;
 }

@@ -16,7 +16,3 @@ Route::get('/', [
     'as' => 'index'
 ]);
 
-Route::get('update-guild',[
-    'uses' => 'BaseController@updateGuild',
-    'as' => 'update-guild'
-]);
